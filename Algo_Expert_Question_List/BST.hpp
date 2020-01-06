@@ -11,6 +11,7 @@ struct BST_Node{
     BST_Node *right ;
 };
 
+<<<<<<< HEAD
 void insert_node(BST_Node *&tree, int val){
     if(tree==NULL){
         BST_Node *tmp = new BST_Node();
@@ -21,6 +22,28 @@ void insert_node(BST_Node *&tree, int val){
         if(tree->value > val){
             
         }else{
+=======
+void inorder(BST_Node *root){
+    inorder(root->left);
+    cout<<root->value<<" ";
+    inorder(root->right);
+}
+
+void insert_node(BST_Node*& BST, int val){
+    if(BST == NULL){
+        BST_Node *tmp = new BST_Node();
+        tmp->value = val;
+        tmp->left = NULL;
+        tmp->right = NULL ;
+        BST = tmp;
+    }else{
+        if(BST->value > val){
+            insert_node(BST->left, val);
+        }else{
+            insert_node(BST->right, val);
+        }
+    }
+>>>>>>> f56d026e7f40c5dd7b514e27c92a02939f80ffe4
 
         }
     }

@@ -2,6 +2,6 @@
 #include "closest_value_bst.hpp"
 
 int main(){
-    run_two_number_sum();
+    run_closest_value_bst();
     return 0 ;
 }
