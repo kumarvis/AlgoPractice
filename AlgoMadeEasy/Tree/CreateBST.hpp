@@ -12,6 +12,14 @@ struct Node {
     struct Node *right;
 };
 
+void printPreorder(struct Node *root){
+    if(root){
+        cout<<root->data<<"\t";
+        printPreorder(root->left);
+        printPreorder(root->right);
+    }
+}
+
 void printInorder(struct Node *root){
     if(root){
         printInorder(root->left);
