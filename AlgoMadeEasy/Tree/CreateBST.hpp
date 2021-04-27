@@ -12,6 +12,14 @@ struct Node {
     struct Node *right;
 };
 
+void printPostOrder(struct Node *root){
+    if(root){
+        printPostOrder(root->left);
+        printPostOrder(root->right);
+        cout<<root->data<<"\t";
+    }
+}
+
 void printPreorder(struct Node *root){
     if(root){
         cout<<root->data<<"\t";

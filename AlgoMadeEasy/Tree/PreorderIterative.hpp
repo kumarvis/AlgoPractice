@@ -23,7 +23,6 @@ void preorderIterative(struct Node *root) {
         curr = node_stk.top()->right;
         node_stk.pop();
     }
-	
 }
 	
 void run_preorderIterative() {
