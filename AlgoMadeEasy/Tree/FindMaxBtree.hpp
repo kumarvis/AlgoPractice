@@ -3,13 +3,13 @@
 
 #include<iostream>
 #include<stack>
+#include<limits>
 #include "CreateBST.hpp"
 using namespace std;
 
 int findMaxBtree(struct Node* root) {
-	
 	if (root == NULL)
-		return INT_MIN;
+		return numeric_limits<int>::min();
 	int res = root->data;
 	int l = findMaxBtree(root->left);
 	int r = findMaxBtree(root->right);

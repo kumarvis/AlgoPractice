@@ -27,8 +27,9 @@ void postorderIterative(struct Node *root){
             node_set.insert(curr);
         }else{
             cout<<curr->data<<"\t";
-            node_set.erase(curr);
+            //node_set.erase(curr);
             node_stk.pop();
+            
         }
         curr = curr->right ;
     }
