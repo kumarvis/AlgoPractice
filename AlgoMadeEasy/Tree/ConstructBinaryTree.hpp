@@ -17,16 +17,13 @@ struct Node* constructBinaryTree(vector<int> vec_in, int st_index, int end_index
 	vector<int> vec_pre, int &pre_order_index) {
 	if (st_index > end_index)
 		return NULL; 
-	int node_val = vec_pre[pre_order_index];
+	int node_val = vec_pre[pre_order_index++];
 	int inorder_index = getInorderIndex(vec_in, node_val);
 	struct Node* root = new Node();
 	root->data = node_val;
-	root->left = constructBinaryTree(vec_in, st_index, inorder_index - 1, vec_pre, ++pre_order_index);
-	if (root->left == NULL)
-		--pre_order_index;
-	root->right = constructBinaryTree(vec_in, inorder_index + 1, end_index, vec_pre, ++pre_order_index);
-	if (root->right == NULL)
-		--pre_order_index;
+	root->left = constructBinaryTree(vec_in, st_index, inorder_index - 1, vec_pre, pre_order_index);
+	root->right = constructBinaryTree(vec_in, inorder_index + 1, end_index, vec_pre, pre_order_index);
+	
 	return root;
 
 
