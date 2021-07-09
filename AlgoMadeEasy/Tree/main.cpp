@@ -7,9 +7,13 @@
 #include "FindElement.hpp"
 #include "FindWidthBinaryTree.hpp"
 #include "DiameterOfBinaryTree.hpp"
-#include "PrintRootToLeaf.hpp"
+//#include "PrintRootToLeaf.hpp"
 #include "CompareTree.hpp"
-#include "ConstructTreeFromTraversal.hpp"
+#include "ConstructBinaryTree.hpp"
+#include "LCA.hpp"
+#include "DeleteNodeBST.hpp"
+#include "LCABST.hpp"
+#include "IsBST.hpp"
 
 using namespace std ;
 
@@ -24,5 +28,9 @@ int main(){
     //run_getDiameterBinary();
     //run_PrintRootToLeaf();
     //run_compareTree();
-    run_constructTree();
+    //run_constructBinaryTree();
+    //run_LCA();
+    //run_deleteNodeBST();
+    run_isBST();
+
 }

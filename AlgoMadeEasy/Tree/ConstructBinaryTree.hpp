@@ -5,6 +5,7 @@
 #include <stack>
 #include <limits>
 #include<vector>
+#include <algorithm>
 #include "CreateBST.hpp"
 
 int getInorderIndex(vector<int> vec_in, int data) {
