@@ -35,6 +35,14 @@ void printInorder(struct Node *root){
     }
 }
 
+void printReverseInorder(struct Node *root){
+    if(root){
+        printReverseInorder(root->right);
+        cout<<root->data<<"\t";
+        printReverseInorder(root->left);
+    }
+}
+
 struct Node* insertNode(struct Node *root, int data){
     if(root ==  NULL){
         struct Node *tmp = new Node();
