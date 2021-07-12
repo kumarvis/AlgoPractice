@@ -7,8 +7,23 @@
 #include<stack>
 #include <limits>
 #include<string>
-
 #include "CreateBST.hpp"
+
+void isBSTCorrect(struct Node *root, bool & ans){
+    static struct Node *prev = NULL ;
+    if(root==NULL)
+        return;
+
+    isBSTCorrect(root->left, ans);
+    if(prev != NULL ){
+        ans = (prev->data < root->data);
+        if(!ans)
+            return ;
+    }
+    prev = root ; 
+    isBSTCorrect(root->right, ans);
+    
+}
 
 bool isBSTWrong(struct Node *root){
     if(root==NULL)
@@ -23,13 +38,16 @@ bool isBSTWrong(struct Node *root){
 }
 
 void run_isBST(){
-    vector<int> vec_arr = {30, 20, 40, 15, 25, 35, 45, 10, 17, 18};
+    //vector<int> vec_arr = {30, 20, 40, 15, 25, 35, 45, 10, 17, 18};
+    vector<int> vec_arr = {10, 4, 1, 6, 12 };
 	struct Node* root = NULL;
 	for (auto& it : vec_arr) {
 		root = insertNode(root, it);
 	}
+    root->right->data = 3;
 	printInorder(root);
-    bool ans = isBSTWrong(root);
+    bool ans = true ; 
+    isBSTCorrect(root, ans);
     cout<<"IS BST = "<<ans<<endl;
 }
 
