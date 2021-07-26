@@ -17,6 +17,7 @@
 #include "SortedArrToBST.hpp"
 #include "KthSmallestElement.hpp"
 #include "FloorCeilBST.hpp"
+#include "IsBSTBalance.hpp"
 
 using namespace std ;
 
@@ -37,6 +38,8 @@ int main(){
     //run_isBST();
     //run_sortedArrToBST();
     //run_kthSmallestElment();
-    run_floorceilBST();
+    //run_floorceilBST();
+    run_isBSTBALANCE();
+    
 
 }

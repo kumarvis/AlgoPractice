@@ -47,6 +47,7 @@ void run_isBST(){
     root->right->data = 3;
 	printInorder(root);
     bool ans = true ; 
+    cout<<endl;
     isBSTCorrect(root, ans);
     cout<<"IS BST = "<<ans<<endl;
 }
