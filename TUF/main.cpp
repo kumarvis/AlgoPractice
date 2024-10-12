@@ -1,9 +1,10 @@
 #include<iostream>
 #include "Test.hpp"
+#include "Pow.hpp"
 
 using namespace std ; 
 
 int main(){
-    test_tuf();
+    test_myPow();
     cout<<"break"<<endl;
 }
