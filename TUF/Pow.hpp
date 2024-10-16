@@ -1,7 +1,6 @@
 #include "common_header.hh"
 using namespace std;
 
-
 double myPowHelper(double x, int n){
     if(n==1){
         return x;
