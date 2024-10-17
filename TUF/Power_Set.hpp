@@ -21,15 +21,6 @@ vector<vector<int> > powerSet(vector<int>& nums) {
     return ans ;
 }
 
-void printVVector(const vector<vector<int>>& vec) {
-    for (const auto& row : vec) {
-        for (const int& val : row) {
-            cout << val << " ";
-        }
-        cout << endl;
-    }
-}
-
 void test_powerSet(){
     vector<int> nums = {1, 2, 3};
     vector<vector<int> > ans = powerSet(nums);
