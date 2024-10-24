@@ -6,6 +6,8 @@
 #include "CheckSubsequenceSum.hpp"
 #include "CountSubsequenceWithTargetSum.hpp"
 #include "CombinationSum.hpp"
+#include "CombinationSum2.hpp"
+
 using namespace std ; 
 
 int main(){
@@ -14,6 +16,7 @@ int main(){
     //test_powerSet();
     //test_checkSubsequenceSum();
     //test_countSubsequenceWithTargetSum();
-    test_combinationSum();
+    //test_combinationSum();
+    test_combinationSum2Helper();
     cout<<"break"<<endl;
 }
