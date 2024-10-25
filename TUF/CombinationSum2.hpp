@@ -1,17 +1,6 @@
 #include "common_header.hh"
 #include "algorithm"
 
-int get_jump(vector<int> vec_arr, int index){
-    int ans = vec_arr.size();
-
-    for(int ii=index; ii < vec_arr.size() - 1 ; ii++){
-        if(vec_arr[ii]!=vec_arr[ii+1]){
-            ans = ii+1;
-            break;
-        }
-    }
-    return ans - index ;
-}
 
 void combinationSum2Helper(vector<int>& candidates, int sum, int index, vector<int> sub_arr, vector<vector<int> > &ans) {
     if(sum==0){
@@ -24,8 +13,15 @@ void combinationSum2Helper(vector<int>& candidates, int sum, int index, vector<i
     sub_arr.push_back(candidates[index]);
     combinationSum2Helper(candidates, sum-candidates[index], index+1, sub_arr, ans);
     sub_arr.pop_back();
-    int jump  = get_jump(candidates, index);
-    combinationSum2Helper(candidates, sum, index+jump, sub_arr, ans);
+    //int jump  = get_jump(candidates, index);
+    for(int i = index + 1; i < candidates.size(); i++) {
+            if(candidates[i] != candidates[index]) {
+                //func(i, sum, nums, candidates, ans); 
+                combinationSum2Helper(candidates, sum, i, sub_arr, ans);
+                break; 
+            }
+    }
+    //combinationSum2Helper(candidates, sum, index+jump, sub_arr, ans);
 }
 
 vector<vector<int> > combinationSum2(vector<int>& candidates, int target) {
