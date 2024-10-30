@@ -12,5 +12,4 @@ int main(){
     //test_generate();
     test_letterCombinations();
     cout<<"break"<<endl;
-
 }
